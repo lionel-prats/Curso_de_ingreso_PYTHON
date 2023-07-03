@@ -1,0 +1,3 @@
+php install customtkinter
+
+http://www.sistemas-utnfra.com.ar/files/apunte-ingreso/Introduccion_Programacion_PY.pdf
