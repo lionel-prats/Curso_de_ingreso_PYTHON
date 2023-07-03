@@ -22,18 +22,26 @@ class App(customtkinter.CTk):
         # configure window
         self.title("UTN FRA")
 
+        # label
         self.label1 = customtkinter.CTkLabel(master=self, text="Nombre")
         self.label1.grid(row=0, column=0, padx=20, pady=10)
         
+        # caja de texto
         self.txt_nombre = customtkinter.CTkEntry(master=self)
         self.txt_nombre.grid(row=0, column=1)
         
+        # boton 'mostrar'
         self.btn_mostrar = customtkinter.CTkButton(master=self, text="Mostrar", command=self.btn_mostrar_on_click)
         self.btn_mostrar.grid(row=2, pady=20, columnspan=2, sticky="nsew")
 
 
     def btn_mostrar_on_click(self):
-        pass
+        nombre = prompt(
+            title = 'PROMPT',
+            prompt = "Ingrese su nombre"
+        )
+        self.txt_nombre.delete(0,10000)
+        self.txt_nombre.insert(0, nombre)
         
     
 if __name__ == "__main__":

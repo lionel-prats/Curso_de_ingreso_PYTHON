@@ -41,7 +41,13 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        numero_a = int(self.txt_operador_a.get())
+        numero_b = int(self.txt_operador_b.get())
+        operacion = numero_a % numero_b
+        respuesta = 'El resto de dividir {0} por {1} es: {2}'.format(numero_a, numero_b, operacion)
+        alert(title= 'Solución', message= respuesta) 
+        self.txt_operador_a.delete(0,10)
+        self.txt_operador_b.delete(0,10)
         
         
     
