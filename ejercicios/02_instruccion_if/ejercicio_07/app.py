@@ -41,7 +41,13 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        edad = int(self.txt_edad.get())
+        condicion = self.combobox_tipo.get()
+        if((condicion == "NATIVO" and edad >= 16) or (condicion == "NATURALIZADO" and edad >= 18)):
+            message = "Puedes votar"
+        else:
+            message = "No puedes votar"
+        alert(title= 'Validación', message= message) 
         
         
     
