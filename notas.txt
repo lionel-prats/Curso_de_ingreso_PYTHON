@@ -1,3 +1,13 @@
-php install customtkinter
+pip install customtkinter
 
 http://www.sistemas-utnfra.com.ar/files/apunte-ingreso/Introduccion_Programacion_PY.pdf
+
+Clase Lunes 03/07/2023 
+
+* otro comando para instalar customtkinter (si falla el primero que nos pasaron) -> py -m pip install customtkinter
+
+SO -> programa principal de una pc 
+dispositivos de entrada: scanner, teclado, etc 
+memoria principal: memoria RAM 
+algoritmo: conjunto ordenado de instrucciones para resolver un problema o llegar a un fin en comun
+

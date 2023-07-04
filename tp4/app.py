@@ -28,7 +28,7 @@ class App(customtkinter.CTk):
         self.label1 = customtkinter.CTkLabel(master=self, text="Marca")
         self.label1.grid(row=0, column=0, padx=10, pady=10)
         
-        self.combobox_marca = customtkinter.CTkComboBox(master=self, values=["ArgentinaLuz", "FelipeLamparas", "JeLuz", "MazIluminacion", ""])
+        self.combobox_marca = customtkinter.CTkComboBox(master=self, values=["ArgentinaLuz", "FelipeLamparas", "JeLuz", "MazIluminacion"])
         self.combobox_marca.grid(row=0, column=1, padx=10, pady=10)
 
         self.label2 = customtkinter.CTkLabel(master=self, text="Cantidad")
@@ -41,9 +41,49 @@ class App(customtkinter.CTk):
         self.btn_calcular.grid(row=2, pady=20, columnspan=2, sticky="nsew")
 
     def btn_calcular_on_click(self):
+
         marca = self.combobox_marca.get()
         cantidad = int(self.combobox_cantidad.get())
-        message = "Vas a llevar {0} lamparitas \n marca {1}".format(cantidad, marca)
+
+        PRECIO = 800
+        total_con_descuento = 0
+
+        total_sin_descuentos = PRECIO * cantidad
+
+        message = "Cantidad: {0}. \nMarca: {1}. \nTotal sin descuento: ARS {2}.".format(cantidad, marca, total_sin_descuentos)
+        
+        if cantidad >= 6:
+            total_con_descuento = total_sin_descuentos * .5
+            message = "Cantidad: {0}. \nMarca: {1}. \nTotal sin descuento: ARS {2}. \nTotal con descuento por cantidad y marca: ARS {3}".format(cantidad, marca, total_sin_descuentos, total_con_descuento)
+        elif cantidad == 5:
+            if marca == "ArgentinaLuz":
+                total_con_descuento = total_sin_descuentos * .6
+                message = "Cantidad: {0}. \nMarca: {1}. \nTotal sin descuento: ARS {2}. \nTotal con descuento por cantidad y marca: ARS {3}".format(cantidad, marca, total_sin_descuentos, total_con_descuento)
+            else: 
+                total_con_descuento = total_sin_descuentos * .7
+                message = "Cantidad: {0}. \nMarca: {1}. \nTotal sin descuento: ARS {2}. \nTotal con descuento por cantidad y marca: ARS {3}".format(cantidad, marca, total_sin_descuentos, total_con_descuento)
+        elif cantidad == 4:
+            if marca == "ArgentinaLuz" or marca == "FelipeLamparas":
+                total_con_descuento = total_sin_descuentos * .75
+                message = "Cantidad: {0}. \nMarca: {1}. \nTotal sin descuento: ARS {2}. \nTotal con descuento por cantidad y marca: ARS {3}".format(cantidad, marca, total_sin_descuentos, total_con_descuento)
+            else: 
+                total_con_descuento = total_sin_descuentos * .8
+                message = "Cantidad: {0}. \nMarca: {1}. \nTotal sin descuento: ARS {2}. \nTotal con descuento por cantidad y marca: ARS {3}".format(cantidad, marca, total_sin_descuentos, total_con_descuento)
+        elif cantidad == 3:
+            if marca == "ArgentinaLuz":
+                total_con_descuento = total_sin_descuentos * .85
+                message = "Cantidad: {0}. \nMarca: {1}. \nTotal sin descuento: ARS {2}. \nTotal con descuento por cantidad y marca: ARS {3}".format(cantidad, marca, total_sin_descuentos, total_con_descuento)
+            elif marca == "FelipeLamparas":
+                total_con_descuento = total_sin_descuentos * .90
+                message = "Cantidad: {0}. \nMarca: {1}. \nTotal sin descuento: ARS {2}. \nTotal con descuento por cantidad y marca: ARS {3}".format(cantidad, marca, total_sin_descuentos, total_con_descuento)
+            else: 
+                total_con_descuento = total_sin_descuentos * .95
+                message = "Cantidad: {0}. \nMarca: {1}. \nTotal sin descuento: ARS {2}. \nTotal con descuento por cantidad y marca: ARS {3}".format(cantidad, marca, total_sin_descuentos, total_con_descuento)
+
+        if total_con_descuento > 4000:
+            total_con_descuento_adicional = total_con_descuento * .95
+            message += "\nTotal con descuento adicional: ARS {0}".format(total_con_descuento_adicional)
+
         alert(title= 'Respuesta', message= message) 
 
 if __name__ == "__main__":

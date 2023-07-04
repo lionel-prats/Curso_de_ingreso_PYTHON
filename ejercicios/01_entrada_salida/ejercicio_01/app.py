@@ -6,8 +6,8 @@ import customtkinter
 
 
 '''
-nombre:
-apellido:
+nombre: Raul Lionel 
+apellido: Prats Costa
 ---
 Ejercicio: entrada_salida_01
 ---
@@ -23,14 +23,12 @@ class App(customtkinter.CTk):
         # configure window
         self.title("UTN FRA")
 
-        self.btn_mostrar = customtkinter.CTkButton( master = self, text = "Mostrar Texto", command = self.btn_mostrar_on_click )
+        self.btn_mostrar = customtkinter.CTkButton( master = self, text = "Mostrar", command = self.btn_mostrar_on_click )
         self.btn_mostrar.grid( row = 2, pady = 20, columnspan = 2, sticky = "nsew" )
 
-
     def btn_mostrar_on_click(self):
-        alert( title = 'ejercicio_01 "entrada_salida" - ALERT', message = 'Esto no anda, funciona' );
+        alert( title = "entrada_salida - ejercicio_01", message = 'Esto no anda, funciona' )
         
-
 if __name__ == "__main__":
     app = App()
     app.mainloop()
