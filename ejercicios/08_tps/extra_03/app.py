@@ -6,6 +6,10 @@ import customtkinter
 import random
 
 '''
+nombre: Raul Lionel 
+apellido: Prats Costa 
+division: J
+--------------------
 Enunciado:
 
 Una importante empresa dediada a la produccion de alfajores nos solicita un aplicacion que les 

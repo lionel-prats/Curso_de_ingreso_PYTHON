@@ -5,6 +5,10 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
+nombre: Raul Lionel 
+apellido: Prats Costa 
+division: J
+--------------------
 Enunciado:
 
 A) Al presionar el botón ‘Agregar' se debera cargar el nombre* y el precio** en sus respectivas listas.

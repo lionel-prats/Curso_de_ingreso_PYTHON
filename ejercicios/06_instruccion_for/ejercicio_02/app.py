@@ -7,6 +7,10 @@ import random
 
 
 '''
+nombre: Raul Lionel 
+apellido: Prats Costa 
+division: J
+--------------------
 Al presionar el botón Mostrar 5 veces un mensaje (utilizando el Dialog Alert) con números ASCENDENTES, desde el 1 al 5.
 '''
 

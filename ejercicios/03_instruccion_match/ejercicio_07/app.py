@@ -6,6 +6,10 @@ import customtkinter
 
 
 '''
+nombre: Raul Lionel 
+apellido: Prats Costa 
+division: J
+--------------------
 Enunciado:
 Obtener el destino seleccionado en el combobox_destino, luego al presionar el 
 botón ‘Informar’ indicar el punto cardinal de nuestro país donde se encuentra: 
@@ -29,7 +33,18 @@ class App(customtkinter.CTk):
         
     
     def btn_informar_on_click(self):
-        pass
+        destino_seleccionado = self.combobox_destino.get()
+        message= ""
+        match destino_seleccionado:
+            case "Cataratas":
+                message= "Norte"
+            case "Mar del plata":
+                message= "Este"
+            case "Ushuaia":
+                message= "Sur"
+            case _:
+                message= "Oeste"
+        alert(title= "Mensaje", message= message)
     
     
 if __name__ == "__main__":

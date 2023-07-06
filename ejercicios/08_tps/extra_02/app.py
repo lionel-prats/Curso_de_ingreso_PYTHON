@@ -6,6 +6,10 @@ import customtkinter
 import random
 
 '''
+nombre: Raul Lionel 
+apellido: Prats Costa 
+division: J
+--------------------
 Enunciado:
 
 La UTN nos solicita la creación de una aplicación para obtener información 

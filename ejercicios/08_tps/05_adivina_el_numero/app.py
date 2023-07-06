@@ -7,6 +7,10 @@ import random
 
 
 '''
+nombre: Raul Lionel 
+apellido: Prats Costa 
+division: J
+--------------------
 Adivina el número (v 1.0):
 Al comenzar el juego generamos un número secreto del 1 al 100, en la pantalla del juego dispondremos de un cuadro de texto 
 para ingresar un número y un botón “Verificar”, si el número ingresado es el mismo que el número secreto se dará por terminado

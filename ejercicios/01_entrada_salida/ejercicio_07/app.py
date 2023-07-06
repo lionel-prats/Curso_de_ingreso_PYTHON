@@ -5,8 +5,9 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Raul Lionel
+apellido: Prats Costa
+división: J
 ---
 Ejercicio: entrada_salida_07
 ---
@@ -80,7 +81,8 @@ class App(customtkinter.CTk):
         numero_a = int(self.txt_operador_a.get())
         numero_b = int(self.txt_operador_b.get())
         operacion = numero_a / numero_b
-        respuesta = 'El resultado de la división es: {0}'.format(operacion)
+        # respuesta = f'El resultado de la división es: {operacion:.2f}'
+        respuesta = 'El resultado de la división es: {0:.2f}'.format(operacion)
         alert(title= 'Solución', message= respuesta) 
         self.txt_operador_a.delete(0,10)
         self.txt_operador_b.delete(0,10)

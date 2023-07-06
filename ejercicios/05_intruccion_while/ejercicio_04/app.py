@@ -6,6 +6,10 @@ import customtkinter
 
 
 '''
+nombre: Raul Lionel 
+apellido: Prats Costa 
+division: J
+--------------------
 Enunciado:
 Al presionar el botón ‘Validar número’, mediante prompt solicitar al usuario que ingrese un número. 
 Se deberá validar que se encuentre entre 0 y 9 inclusive. En caso no coincidir con el rango, 

@@ -7,8 +7,9 @@ import random
 
 
 '''
-nombre:
-apellido:
+nombre: Raul Lionel
+apellido: Prats
+division: J
 ---
 Ejercicio: instrucion_if_09
 ---

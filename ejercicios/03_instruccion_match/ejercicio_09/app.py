@@ -6,6 +6,10 @@ import customtkinter
 
 
 '''
+nombre: Raul Lionel 
+apellido: Prats Costa 
+division: J
+--------------------
 Una agencia de viajes cobra $15.000 por cada estadía como base. 
 Luego para calcular las tarifas total realiza el siguiente cálculo, 
 en función de la estación del año y del destino elegido:
@@ -53,6 +57,47 @@ class App(customtkinter.CTk):
     
     def btn_informar_on_click(self):
         pass
+        tarifa_base = 15000
+        destino_seleccionado = self.combobox_destino.get()
+        estacion_seleccionada = self.combobox_estaciones.get()
+        message= f'''
+        Destino seleccionado: {destino_seleccionado}.
+        Estación seleccionada: {estacion_seleccionada}.
+        Tarifa base: ${tarifa_base}.
+        '''
+        match estacion_seleccionada:
+            case "Otoño" | "Primavera":
+                match destino_seleccionado:
+                    case "Cordoba":
+                        message+= "Ajuste por temporada: -."
+                        message+= f"\nTotal a pagar: ${tarifa_base}."
+                    case _:
+                        message+= "Ajuste por temporada: +10%."
+                        message+= f"\nTotal a pagar: ${tarifa_base * 1.1}."
+            case "Invierno":
+                match destino_seleccionado:
+                    case "Bariloche":
+                        message+= "Ajuste por temporada: +20%."
+                        message+= f"\nTotal a pagar: ${tarifa_base * 1.2}."
+                    case "Mar del plata":
+                        message+= "Ajuste por temporada: -20%."
+                        message+= f"\nTotal a pagar: ${tarifa_base * .8}."
+                    case _:
+                        message+= "Ajuste por temporada: -10%."
+                        message+= f"\nTotal a pagar: ${tarifa_base * .9}."
+            case _:
+                match destino_seleccionado:
+                    case "Bariloche":
+                        message+= "Ajuste por temporada: -20%."
+                        message+= f"\nTotal a pagar: ${tarifa_base * .8}."
+                    case "Mar del plata":
+                        message+= "Ajuste por temporada: +20%."
+                        message+= f"\nTotal a pagar: ${tarifa_base * 1.2}."
+                    case _:
+                        message+= "Ajuste por temporada: +10%."
+                        message+= f"\nTotal a pagar: ${tarifa_base * 1.1}."
+
+        alert(title= "Mensaje", message= message)
             
     
 if __name__ == "__main__":

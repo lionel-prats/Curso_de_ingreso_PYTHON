@@ -7,6 +7,10 @@ import customtkinter
 
 
 '''
+nombre: Raul Lionel 
+apellido: Prats Costa 
+division: J
+--------------------
 Luego de presionar el botón 'Iniciar',se disparara un temporizador de 2s que haga visible el botón oculto.
 
 '''

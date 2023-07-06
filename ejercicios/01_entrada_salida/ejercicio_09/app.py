@@ -5,8 +5,9 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Raul Lionel
+apellido: Prats Costa
+división: J
 ---
 Ejercicio: entrada_salida_09
 ---
@@ -45,7 +46,7 @@ class App(customtkinter.CTk):
         indice_de_actualizacion = 1 + (incremento / 100);
         sueldo_actualizado = sueldo * indice_de_actualizacion;
         # sueldo_actualizado = sueldo + ((sueldo * incremento) / 100)
-        respuesta = 'Con el incremento del {0}%, en vigencia a partir del mes que viene, tu sueldo actual (${1}), pasará a ser de ${2}'.format(incremento, sueldo, sueldo_actualizado)
+        respuesta = 'Con el incremento del {0:.2f}%, en vigencia a partir del mes que viene, tu sueldo actual (${1:.2f}), pasará a ser de ${2:.2f}'.format(incremento, sueldo, sueldo_actualizado)
         alert(title= 'Solución', message= respuesta) 
         self.txt_sueldo.delete(0,10)
         self.txt_incremento.delete(0,10)

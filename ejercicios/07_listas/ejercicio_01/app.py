@@ -5,6 +5,10 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
+nombre: Raul Lionel 
+apellido: Prats Costa 
+division: J
+--------------------
 Al presionar el botón  'Mostrar', se deberán mostrar los números almacenados en el vector lista_datos utilizando Dialog Alert para informar cada elemento.
 '''
 

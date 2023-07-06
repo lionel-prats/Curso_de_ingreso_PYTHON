@@ -6,6 +6,10 @@ import customtkinter
 
 
 '''
+nombre: Raul Lionel 
+apellido: Prats Costa 
+division: J
+--------------------
 Una agencia de viajes nos pide informar si hacemos viajes a lugares según la estación del año. 
 En caso de hacerlo mostrar un alert con el mensaje “Se viaja”, 
 caso contrario mostrar “No se viaja”. 

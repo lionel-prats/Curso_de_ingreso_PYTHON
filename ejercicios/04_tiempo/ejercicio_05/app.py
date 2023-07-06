@@ -7,6 +7,10 @@ import customtkinter
 
 
 '''
+nombre: Raul Lionel 
+apellido: Prats Costa 
+division: J
+--------------------
 Luego de presionar el botón 'Iniciar', se debe disparar, 3 segundos después, un saludo con el mensaje "Bienvenido a la UTN FRA".
 
 '''

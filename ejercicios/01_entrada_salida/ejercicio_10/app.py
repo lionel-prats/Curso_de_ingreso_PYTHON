@@ -5,8 +5,9 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Raul Lionel
+apellido: Prats Costa
+division: J
 ---
 Ejercicio: entrada_salida_10
 ---
@@ -42,9 +43,9 @@ class App(customtkinter.CTk):
     def btn_mostrar_on_click(self):
         importe = float(self.txt_importe.get())
         descuento = float(self.txt_descuento.get())
-        indice_de_actualizacion = 1 - (descuento / 100);
-        importe_actualizado = importe * indice_de_actualizacion;
-        respuesta = 'Con el descuento del {0}%, el importe pasa a ser de (${1})'.format(descuento, importe_actualizado)
+        indice_de_actualizacion = 1 - (descuento / 100)
+        importe_actualizado = importe * indice_de_actualizacion
+        respuesta = 'Con el descuento del {0:.2f}%, el importe original de ${1:.2f}, pasa a ser de ${2:.2f}'.format(descuento, importe, importe_actualizado)
         alert(title= 'Solución', message= respuesta) 
         self.txt_importe.delete(0,10)
         self.txt_descuento.delete(0,10)
